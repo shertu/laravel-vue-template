@@ -1,0 +1,7 @@
+version: "3.9"
+services:
+  webapp:
+    build: .
+    ports:
+      - "80:80" #000-default.conf
+      - "443:443" #default-ssl.conf
