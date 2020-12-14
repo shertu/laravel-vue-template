@@ -1,0 +1,5 @@
+FROM php:apache
+COPY ./000-default.conf /etc/apache2/sites-available/000-default.conf
+
+# This line of code should be used instead of volumes in production
+COPY ./src/ /var/www/html/
