@@ -1,3 +1,7 @@
+# npm and webpack
+node_modules/
+/wwwroot/
+
 # https://github.com/github/gitignore/blob/master/Global/macOS.gitignore
 
 # General
