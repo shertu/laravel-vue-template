@@ -1,0 +1,6 @@
+FROM php:apache
+COPY ./000-default.conf /etc/apache2/sites-available/000-default.conf
+COPY ./wwwroot/ /var/www/html/
+
+# Consider using multi-stage build instead of volumes for production
+# https://docs.docker.com/develop/develop-images/multistage-build/
