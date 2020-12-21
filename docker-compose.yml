@@ -5,7 +5,6 @@ services:
     ports:
       - "80:80" #000-default.conf
       - "443:443" #default-ssl.conf
-    #volumes: # volumes should be avoided in production
-      #- ./wwwroot:/var/www/html/:ro
-      #- ./controller:/var/www/html/api/:ro
-    
+    volumes: # volumes should be avoided in production
+      # write access is required for: /var/www/html/storage /var/www/html/bootstrap/cache
+      - ./laravel:/var/www/html/

@@ -1,8 +1,8 @@
 # node and npm
 /node_modules
 
-# web application files
-/laravel/public
+# web application client-side files
+#/laravel/public
 
 # https://github.com/github/gitignore/blob/master/Composer.gitignore
 
