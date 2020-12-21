@@ -8,3 +8,5 @@ services:
     volumes: # volumes should be avoided in production
       # write access is required for: /var/www/html/storage /var/www/html/bootstrap/cache
       - ./laravel:/var/www/html/
+    env_file:
+      - web-variables.env
