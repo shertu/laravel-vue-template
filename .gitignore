@@ -2,7 +2,7 @@
 /node_modules
 
 # web application client-side files
-#/laravel/public
+/wwwroot
 
 # https://github.com/github/gitignore/blob/master/Composer.gitignore
 
