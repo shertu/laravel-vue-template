@@ -27,19 +27,16 @@ module.exports = {
   ],
 
   output: {
-    path: path.resolve(__dirname, 'wwwroot'),
-    publicPath: '/',
+    path: path.resolve(__dirname, 'laravel/public/wwwroot'),
+    publicPath: '/wwwroot',
   },
 
   resolve: {
     extensions: ['.html', '.js', '.ts', '.css', '.less', '.vue'],
-    // alias: {
-    //   'vue': '@vue/runtime-dom'
-    // }
   },
 
   devServer: {
-    contentBase: path.resolve(__dirname, 'wwwroot'),
+    contentBase: path.resolve(__dirname, 'laravel/public'),
     writeToDisk: true,
   },
 
