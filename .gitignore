@@ -1,13 +1,6 @@
 # node and npm
 /node_modules
 
-# webpack generated client-side files
-/laravel/public/wwwroot
-
-# Commit your application's lock file https://getcomposer.org/doc/01-basic-usage.md#commit-your-composer-lock-file-to-version-control
-# You may choose to ignore a library lock file http://getcomposer.org/doc/02-libraries.md#lock-file
-# composer.lock
-
 # https://github.com/github/gitignore/blob/master/Global/macOS.gitignore
 
 # General

@@ -6,13 +6,11 @@ services:
   webapp:
     build: .
     ports:
-      - "80:80" #000-default.conf
-      - "443:443" #default-ssl.conf
+      - "80:80/tcp" #000-default.conf
+      - "443:443/tcp" #default-ssl.conf
     volumes:
       # write access is required for: /var/www/html/storage /var/www/html/bootstrap/cache
       - ./laravel:/var/www/html/
-    env_file:
-      - web-variables.env
   dns:
     image: coredns/coredns
     ports:
