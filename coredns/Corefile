@@ -1,0 +1,5 @@
+shrinkstaircaseinsure.com:53 {
+    file /root/shrinkstaircaseinsure.com.dnszone
+    log
+    errors
+}

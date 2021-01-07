@@ -1,0 +1,7 @@
+# phpunit
+.phpunit.result.cache
+
+# https://github.com/github/gitignore/blob/master/Composer.gitignore
+
+composer.phar
+/vendor/

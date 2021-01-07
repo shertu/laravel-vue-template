@@ -1,3 +1,6 @@
+# docker-compose up -d --build --no-deps
+# write access volumes should be avoided in production
+
 version: "3.9"
 services:
   webapp:
@@ -5,8 +8,15 @@ services:
     ports:
       - "80:80" #000-default.conf
       - "443:443" #default-ssl.conf
-    volumes: # volumes should be avoided in production
+    volumes:
       # write access is required for: /var/www/html/storage /var/www/html/bootstrap/cache
       - ./laravel:/var/www/html/
     env_file:
       - web-variables.env
+  dns:
+    image: coredns/coredns
+    ports:
+      - "53:53/udp"
+    volumes:
+      - ./coredns:/root/:ro # the root cannot be used as a volume
+    command: -conf /root/Corefile # so we need to specify the path to a Corefile

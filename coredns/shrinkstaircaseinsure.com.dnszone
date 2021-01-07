@@ -1,0 +1,12 @@
+; https://help.dyn.com/how-to-format-a-zone-file/
+
+$ORIGIN shrinkstaircaseinsure.com.
+@	IN	SOA ns.example.com.		(
+		zone-admin.example.com.		; address of responsible party
+		2016072701					; serial number
+		3600						; refresh period
+		600							; retry period
+		604800						; expire time
+		1800					)	; minimum ttl
+
+@	IN	A 127.0.0.1
