@@ -2,9 +2,9 @@
   "private": true,
   "scripts": {
     "build": "webpack",
-    "eslint": "eslint \"client/src/**/*.{js,ts,vue}\" --fix",
+    "eslint": "eslint \"src/**/*.{js,ts,vue}\" --fix",
     "openapi": "openapi-generator-cli generate -i http://zukte.azurewebsites.net/swagger/1.0/swagger.json -g typescript-fetch",
-    "stylelint": "stylelint \"client/src/**/*.{css,less,vue}\" --fix"
+    "stylelint": "stylelint \"src/**/*.{css,less,vue}\" --fix"
   },
   "dependencies": {
     "@babel/core": "^7.12.3",

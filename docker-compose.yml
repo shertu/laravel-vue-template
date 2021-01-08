@@ -4,12 +4,12 @@
 version: "3.9"
 services:
   webapp:
-    build: .
+    build: ./apache
     ports:
       - "80:80/tcp" #000-default.conf
       - "443:443/tcp" #default-ssl.conf
     volumes:
-      # write access is required for: /var/www/html/storage /var/www/html/bootstrap/cache
+      # write access is required for: /storage and /bootstrap/cache
       - ./laravel:/var/www/html/
   dns:
     image: coredns/coredns

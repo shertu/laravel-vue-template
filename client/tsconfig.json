@@ -1,7 +1,7 @@
 {
-  "include": ["**/client"],
-  "exclude": ["**/node_modules"],
-  "files": ["client/generated-sources/vue-shims.d.ts"],
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"],
+  "files": ["other/vue-shims.d.ts"],
   "compilerOptions": {
     // this aligns with Vue's browser support
     "target": "es5",

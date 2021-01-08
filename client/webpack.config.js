@@ -22,12 +22,12 @@ module.exports = {
 
   entry: [
     require('regenerator-runtime/path').path,
-    './client/src/components/App/webpack-entry.ts',
+    './src/webpack-entry.ts',
     //'./client/src/style/index.less',
   ],
 
   output: {
-    path: path.resolve(__dirname, 'laravel/public/wwwroot'),
+    path: path.resolve(__dirname, '../laravel/public/wwwroot'),
     publicPath: '/wwwroot',
   },
 
