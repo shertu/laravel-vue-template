@@ -39,3 +39,6 @@ Temporary Items
 
 # Local History for Visual Studio Code
 .history/
+
+# vetur
+/vetur.config.js
