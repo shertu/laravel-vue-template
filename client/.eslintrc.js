@@ -1,21 +1,15 @@
-const Typescript = require('typescript'); // added to clear dependency check
-
 module.exports = {
     "env": {
         "browser": true,
-        "es6": true
+        "es2021": true
     },
     "extends": [
         "eslint:recommended",
         "plugin:vue/essential",
-        "plugin:@typescript-eslint/eslint-recommended"
+        "plugin:@typescript-eslint/recommended"
     ],
-    "globals": {
-        "Atomics": "readonly",
-        "SharedArrayBuffer": "readonly"
-    },
     "parserOptions": {
-        "ecmaVersion": 2018,
+        "ecmaVersion": 12,
         "parser": "@typescript-eslint/parser",
         "sourceType": "module"
     },

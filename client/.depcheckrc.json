@@ -1,0 +1,11 @@
+{
+    "ignores": [
+        "babel-loader",
+        "html-loader",
+        "stylelint-config-standard",
+        "typescript",
+        "vue-template-compiler",
+        "webpack-cli",
+        "webpack-dev-server"
+    ]
+}

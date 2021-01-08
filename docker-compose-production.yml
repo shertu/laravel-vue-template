@@ -1,0 +1,8 @@
+# do not use docker volumes in production
+version: "3.9"
+services:
+  webapp:
+    build: ./apache
+    ports:
+      - "80:80/tcp" #000-default.conf
+      - "443:443/tcp" #default-ssl.conf
