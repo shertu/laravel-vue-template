@@ -3,7 +3,7 @@
   "scripts": {
     "build": "webpack",
     "eslint": "eslint \"src/**/*.{js,ts,vue}\" --fix",
-    "openapi": "openapi-generator-cli generate -i http://zukte.azurewebsites.net/swagger/1.0/swagger.json -g typescript-fetch",
+    "openapi": "openapi-generator-cli generate -i http://zukte.azurewebsites.net/swagger/1.0/swagger.json -g typescript-fetch -o \"src/openapi-generator\"",
     "stylelint": "stylelint \"src/**/*.{css,less,vue}\" --fix"
   },
   "dependencies": {

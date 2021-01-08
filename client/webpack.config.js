@@ -80,8 +80,8 @@ module.exports = {
     // adds a .html file as an entry point
     // and automatically attaches optimized outputs
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'client/index.html'),
-      favicon: path.resolve(__dirname, 'client/favicon.ico'),
+      template: path.resolve(__dirname, 'src/index.html'),
+      favicon: path.resolve(__dirname, 'src/favicon.ico'),
     }),
 
     // removes the build directory before rebuild
