@@ -21,7 +21,7 @@ module.exports = {
     // https://webpack.js.org/plugins/mini-css-extract-plugin/
     new MiniCssExtractPlugin(),
 
-    // https://github.com/vuejs/vue-loader
+    // https://vue-loader.vuejs.org/
     new VueLoaderPlugin(),
   ],
 
@@ -32,6 +32,10 @@ module.exports = {
 
   module: {
     rules: [{
+      test: /\.vue$/,
+      // https://github.com/vuejs/vue-loader
+      loader: 'vue-loader',
+    }, {
       test: /\.html$/i,
       // https://webpack.js.org/loaders/html-loader/
       loader: 'html-loader',
@@ -55,10 +59,6 @@ module.exports = {
         // https://webpack.js.org/loaders/babel-loader/
         'babel-loader',
       ],
-    }, {
-      test: /\.vue$/,
-      // https://github.com/vuejs/vue-loader
-      loader: 'vue-loader',
     }],
   },
 };

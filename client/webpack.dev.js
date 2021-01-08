@@ -11,8 +11,11 @@ module.exports = merge(common, {
 
     // https://webpack.js.org/configuration/dev-server/
     devServer: {
-        contentBase: path.resolve(__dirname, '../laravel/public/wwwroot'),
-        compress: true,
-        //writeToDisk: true,
+        open: true,
+        //hot: true,
+        contentBase: path.resolve(__dirname, '../laravel/public/wwwroot/'),
+        //publicPath: path.resolve(__dirname, '../laravel/public/wwwroot/'),
+        //compress: true,
+        writeToDisk: true,
     },
 });
