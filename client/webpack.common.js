@@ -27,7 +27,7 @@ module.exports = {
 
   output: {
     path: path.resolve(__dirname, '../laravel/public/wwwroot'),
-    publicPath: '/wwwroot',
+    publicPath: '/wwwroot/',
   },
 
   module: {
