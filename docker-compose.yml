@@ -1,7 +1,10 @@
 version: "3.9"
 services:
   webapp:
-    build: ./apache
+    build:
+      context: ./
+      dockerfile: ./apache.dockerfile
+      target: development
     ports:
       - "80:80/tcp" #000-default.conf
       - "443:443/tcp" #default-ssl.conf

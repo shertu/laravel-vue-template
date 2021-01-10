@@ -5,6 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
+  // https://webpack.js.org/concepts/entry-points/
   entry: path.resolve(__dirname, 'src/webpack-entry.ts'),
 
   plugins: [
@@ -24,11 +25,6 @@ module.exports = {
     // https://vue-loader.vuejs.org/
     new VueLoaderPlugin(),
   ],
-
-  output: {
-    path: path.resolve(__dirname, '../laravel/public/wwwroot'),
-    publicPath: '/wwwroot/',
-  },
 
   module: {
     rules: [{
