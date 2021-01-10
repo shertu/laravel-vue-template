@@ -11,7 +11,6 @@ module.exports = merge(common, {
     // https://webpack.js.org/configuration/dev-server/
     devServer: {
         open: true,
-        writeToDisk: true,
         hot: true,
     },
 });
