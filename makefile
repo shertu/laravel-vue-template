@@ -26,3 +26,5 @@ build: client.build
 # laravel
 laravel.update:
 	cd "./laravel" && composer update
+laravel.migrate:
+	cd "./laravel" && php artisan migrate:refresh

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ApplicationUserController;
 use App\Models\ApplicationUser;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -19,10 +20,13 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
 // routes inside api.php will be prefixed with /api/
-Route::get('ApplicationUsers', 42069);
-//Route::get('ApplicationUsers', 'ApplicationUserController@index');
-Route::get('ApplicationUsers/{id}', 'ApplicationUserController@show');
-Route::post('ApplicationUsers', 'ApplicationUserController@store');
-Route::put('ApplicationUsers/{id}', 'ApplicationUserController@update');
-Route::delete('ApplicationUsers/{id}', 'ApplicationUserController@delete');
+Route::get('ApplicationUsers', [ApplicationUserController::class, 'index']);
+Route::get('ApplicationUsers/{id}', [ApplicationUserController::class, 'show']);
+Route::post('ApplicationUsers', [ApplicationUserController::class, 'store']);
+Route::put('ApplicationUsers/{id}', [ApplicationUserController::class, 'update']);
+Route::delete('ApplicationUsers/{id}', [ApplicationUserController::class, 'delete']);
