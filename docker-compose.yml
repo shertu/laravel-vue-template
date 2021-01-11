@@ -11,6 +11,18 @@ services:
     volumes:
       # write access is required for: /storage and /bootstrap/cache
       - ./laravel:/var/www/html/
+  database:
+    image: mysql
+    # command: --default-authentication-plugin=mysql_native_password
+    # restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+    ports: # enable localhost
+      - '3306:3306/tcp'
+    # expose:
+    #   # Opens port 3306 on the container
+    #   - '3306'
+    #   # Where our data will be persisted
   dns:
     image: coredns/coredns
     ports:
@@ -18,3 +30,4 @@ services:
     volumes:
       - ./coredns:/root/:ro # the root cannot be used as a volume
     command: -conf /root/Corefile # so we need to specify the path to a Corefile
+

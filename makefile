@@ -16,13 +16,12 @@ client.stylelint:
 	cd "./client" && npm run stylelint
 
 # docker-compose
-dev: client.build
-	docker-compose up -d --build --no-deps --remove-orphans
+start:
+	docker-compose up -d
 	open http://localhost/
-production: client.build
-	docker-compose -f docker-compose.production.yml up -d --build --no-deps --remove-orphans
-
-# please use make dev for local development
+build: client.build
+	docker-compose up -d --build
+	open http://localhost/
 
 # laravel
 laravel.update:
