@@ -3,28 +3,23 @@
 #    command
 #    command
 
-# npm scripts
-client.build:
-	cd "./client" && npm run build
-client.eslint:
-	cd "./client" && npm run eslint
-client.openapi:
-	cd "./client" && npm run openapi
-client.start:
-	cd "./client" && npm run start
-client.stylelint:
-	cd "./client" && npm run stylelint
+fresh: update build database.rebuild start
 
-# docker-compose
+update:
+	cd "./client" && npm update
+	cd "./laravel" && composer update
+	docker-compose up -d --build
+	docker-compose stop
+
+build:
+	cd "./client" && npm run build
+
+database.rebuild:
+	docker-compose up -d database
+	sleep 1.57
+	cd "./laravel" && php artisan migrate:fresh --seed
+	docker-compose stop database
+
 start:
 	docker-compose up -d
 	open http://localhost/
-build: client.build
-	docker-compose up -d --build
-	open http://localhost/
-
-# laravel
-laravel.update:
-	cd "./laravel" && composer update
-laravel.migrate:
-	cd "./laravel" && php artisan migrate:refresh
