@@ -21,8 +21,8 @@ return [
             'tags' => [
 
                 [
-                   'name' => 'user',
-                   'description' => 'Application users',
+                   'name' => 'ApplicationUser',
+                   'description' => 'an individual\'s account in the web application',
                 ],
 
             ],

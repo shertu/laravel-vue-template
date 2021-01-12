@@ -26,7 +26,7 @@ use Illuminate\Support\Facades\Route;
 
 // routes inside api.php will be prefixed with /api/
 Route::get('ApplicationUsers', [ApplicationUserController::class, 'index']);
-Route::get('ApplicationUsers/{id}', [ApplicationUserController::class, 'show']);
+//Route::get('ApplicationUsers/{id}', [ApplicationUserController::class, 'show']);
 Route::post('ApplicationUsers', [ApplicationUserController::class, 'store']);
 Route::put('ApplicationUsers/{id}', [ApplicationUserController::class, 'update']);
 Route::delete('ApplicationUsers/{id}', [ApplicationUserController::class, 'destroy']);

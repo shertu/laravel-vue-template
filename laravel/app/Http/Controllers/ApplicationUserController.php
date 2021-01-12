@@ -14,7 +14,9 @@ class ApplicationUserController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @OpenApi\Operation(tags="user")
+     * @OpenApi\Operation(tags="ApplicationUser")
+     * @OpenApi\Response(factory="ListApplicationUserResponse")
+     * 
      * @return \Illuminate\Http\Response
      */
     public function index()
@@ -25,7 +27,9 @@ class ApplicationUserController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @OpenApi\Operation(tags="user")
+     * @OpenApi\Operation(tags="ApplicationUser")
+     * @OpenApi\Response(factory="InsertApplicationUserResponse")
+     * 
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
@@ -36,21 +40,11 @@ class ApplicationUserController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @OpenApi\Operation(tags="user")
-     * @param  \App\Models\ApplicationUser  $applicationUser
-     * @return \Illuminate\Http\Response
-     */
-    public function show(ApplicationUser $applicationUser)
-    {
-        return $applicationUser;
-    }
-
-    /**
      * Update the specified resource in storage.
      *
-     * @OpenApi\Operation(tags="user")
+     * @OpenApi\Operation(tags="ApplicationUser")
+     * @OpenApi\Response(factory="UpdateApplicationUserResponse")
+     * 
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Models\ApplicationUser  $applicationUser
      * @return \Illuminate\Http\Response
@@ -64,7 +58,9 @@ class ApplicationUserController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @OpenApi\Operation(tags="user")
+     * @OpenApi\Operation(tags="ApplicationUser")
+     * @OpenApi\Response(factory="DeleteApplicationUserResponse")
+     * 
      * @param  \App\Models\ApplicationUser  $applicationUser
      * @return \Illuminate\Http\Response
      */
