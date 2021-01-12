@@ -1,25 +1,32 @@
-For https://github.com/OpenAPITools/openapi-generator to work, you will need the Java Virtual Machine
+# php-app
+
+## prerequisite collection
+You will need to download [composer](https://getcomposer.org/) and configure your system `PATH` and `composer.phar` file so that you can call `composer` from any directory in your terminal or shell.
+
+You will need to download and install the Node Package Manager which comes bundled with [Node.](https://nodejs.org/en/download/)
+
+You will need to download and install [Docker Desktop.](https://www.docker.com/products/docker-desktop)
+
+You will need to download and install a Java Virtual Machine for [`openapi-generator`](https://github.com/OpenAPITools/openapi-generator) to work as expected.
+
+```
 brew install --cask adoptopenjdk
+```
 
-When using vetur then please configure a vetur.config.js file.
+## Vue
 
+Vue (pronounced /vjuː/) is a progressive framework for building user interfaces.
 
-## About Laravel
+The documentation for Vue can be found [here.](https://v3.vuejs.org/guide/introduction.html)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Laravel
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
+Laravel is a web application framework with expressive, elegant syntax.
 
 Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+If you don't feel like reading, [Laracasts](https://laracasts.com) can help.
+
+# Laravel OpenAPI
+
+To connect the Vue front-end framework to the Laravel back-end framework use [Laravel OpenAPI](https://vyuldashev.github.io/laravel-openapi/) and the `make openapi` command.

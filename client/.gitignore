@@ -3,6 +3,7 @@
 
 # openapi-generator
 /src/openapi-generator
+/openapi.json
 
 # webpack-dev-server
 /dist

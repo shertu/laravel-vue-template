@@ -12,3 +12,6 @@ composer.phar
 
 # generated client-side files
 /public/wwwroot
+
+# laravel-openapi
+/openapi.json

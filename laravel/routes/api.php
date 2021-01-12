@@ -29,4 +29,4 @@ Route::get('ApplicationUsers', [ApplicationUserController::class, 'index']);
 Route::get('ApplicationUsers/{id}', [ApplicationUserController::class, 'show']);
 Route::post('ApplicationUsers', [ApplicationUserController::class, 'store']);
 Route::put('ApplicationUsers/{id}', [ApplicationUserController::class, 'update']);
-Route::delete('ApplicationUsers/{id}', [ApplicationUserController::class, 'delete']);
+Route::delete('ApplicationUsers/{id}', [ApplicationUserController::class, 'destroy']);
