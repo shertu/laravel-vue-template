@@ -19,4 +19,4 @@ openapi:
 	rm client/openapi.json
 
 lint:
-	php-cs-fixer fix laravel --rules=@Symfony
+	cd laravel && php-cs-fixer fix . --rules=@Symfony
