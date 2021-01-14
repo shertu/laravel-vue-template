@@ -42,3 +42,6 @@ Temporary Items
 
 # vetur
 /vetur.config.js
+
+# PHP Coding Standards Fixer
+.php_cs.cache

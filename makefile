@@ -17,3 +17,6 @@ openapi:
 	rm -r client/src/openapi-generator
 	cd client && npm run openapi
 	rm client/openapi.json
+
+lint:
+	php-cs-fixer fix laravel --rules=@Symfony

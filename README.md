@@ -7,10 +7,16 @@ You will need to download and install the Node Package Manager which comes bundl
 
 You will need to download and install [Docker Desktop.](https://www.docker.com/products/docker-desktop)
 
-You will need to download and install a Java Virtual Machine for [`openapi-generator`](https://github.com/OpenAPITools/openapi-generator) to work as expected.
+You will need to download and install a Java Virtual Machine for [`openapi-generator`](https://github.com/OpenAPITools/openapi-generator) to work as expected, e.g.
 
 ```
 brew install --cask adoptopenjdk
+```
+
+You Will need to download and install the [PHP coding standards fixer,](https://cs.symfony.com/) e.g.
+
+```
+brew install php-cs-fixer
 ```
 
 ## Vue
