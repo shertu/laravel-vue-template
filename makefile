@@ -18,5 +18,11 @@ openapi:
 	cd client && npm run openapi
 	rm client/openapi.json
 
+start:
+	docker-compose up -d
+	cd client && npm run start
+
 lint:
+	cd client && npm run eslint
+	cd client && npm run stylelint
 	cd laravel && php-cs-fixer fix . --rules=@Symfony
