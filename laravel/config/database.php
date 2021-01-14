@@ -3,7 +3,6 @@
 use Illuminate\Support\Str;
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Default Database Connection Name
@@ -34,7 +33,6 @@ return [
     */
 
     'connections' => [
-
         // 'sqlite' => [
         //     'driver' => 'sqlite',
         //     'url' => env('DATABASE_URL'),
@@ -90,7 +88,6 @@ return [
         //     'prefix' => '',
         //     'prefix_indexes' => true,
         // ],
-
     ],
 
     /*
@@ -143,5 +140,4 @@ return [
     //     ],
 
     // ],
-
 ];

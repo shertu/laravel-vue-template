@@ -16,7 +16,7 @@ class ApplicationUserController extends Controller
      *
      * @OpenApi\Operation(tags="ApplicationUser")
      * @OpenApi\Response(factory="ListApplicationUserResponse")
-     * 
+     *
      * @return \Illuminate\Http\Response
      */
     public function index()
@@ -29,13 +29,13 @@ class ApplicationUserController extends Controller
      *
      * @OpenApi\Operation(tags="ApplicationUser")
      * @OpenApi\Response(factory="InsertApplicationUserResponse")
-     * 
-     * @param  \Illuminate\Http\Request  $request
+     *
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
         $user = ApplicationUser::create($request->all());
+
         return response()->json($user, 201);
     }
 
@@ -44,14 +44,13 @@ class ApplicationUserController extends Controller
      *
      * @OpenApi\Operation(tags="ApplicationUser")
      * @OpenApi\Response(factory="UpdateApplicationUserResponse")
-     * 
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\ApplicationUser  $applicationUser
+     *
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, ApplicationUser $applicationUser)
     {
         $applicationUser->update($request->all());
+
         return response()->json($applicationUser, 200);
     }
 
@@ -60,13 +59,13 @@ class ApplicationUserController extends Controller
      *
      * @OpenApi\Operation(tags="ApplicationUser")
      * @OpenApi\Response(factory="DeleteApplicationUserResponse")
-     * 
-     * @param  \App\Models\ApplicationUser  $applicationUser
+     *
      * @return \Illuminate\Http\Response
      */
     public function destroy(ApplicationUser $applicationUser)
     {
         $applicationUser->delete();
+
         return response()->json(null, 204);
     }
 }

@@ -1,11 +1,8 @@
 <?php
 
 return [
-
     'collections' => [
-
         'default' => [
-
             'info' => [
                 'title' => config('app.name'),
                 'description' => null,
@@ -19,12 +16,10 @@ return [
             ],
 
             'tags' => [
-
                 [
                    'name' => 'ApplicationUser',
                    'description' => 'an individual\'s account in the web application',
                 ],
-
             ],
 
             'security' => [
@@ -41,12 +36,9 @@ return [
             // Register custom middlewares for different objects.
             'middlewares' => [
                 'paths' => [
-                    //
                 ],
             ],
-
         ],
-
     ],
 
     // Directories to use for locating OpenAPI object definitions.
@@ -71,5 +63,4 @@ return [
             app_path('OpenApi/SecuritySchemes'),
         ],
     ],
-
 ];
