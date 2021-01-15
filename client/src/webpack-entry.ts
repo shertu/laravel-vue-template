@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import App from './components/App/App.vue';
+import App from './component/App/App.vue';
 import Antd from 'ant-design-vue';
 import 'ant-design-vue/dist/antd.less';
 Vue.config.productionTip = false;
