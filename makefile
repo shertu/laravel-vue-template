@@ -24,13 +24,15 @@ start:
 	docker-compose up -d
 	cd client && npm run start
 
-# Lint the code
-lint:
+# Execute code linters to fix code style
+lint_server:
+	cd laravel && php-cs-fixer fix . --rules=@Symfony
+lint_client:
 	cd client && npm run eslint
 	cd client && npm run stylelint
-	cd laravel && php-cs-fixer fix . --rules=@Symfony
 
-# Execute unit and feature tests
-test:
-	cd client && npm run test
+# Test web application in a variety of ways
+test_server:
 	cd laravel && php artisan test
+test_client:
+	cd client && npm run test
