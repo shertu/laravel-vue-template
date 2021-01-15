@@ -36,17 +36,26 @@ module.exports = {
       // https://webpack.js.org/loaders/html-loader/
       loader: 'html-loader',
     }, {
-      test: /\.less$/,
-      // https://webpack.js.org/loaders/less-loader/
-      loader: "less-loader",
-    }, {
-      test: /\.css$/i,
+      test: /\.(css|less)$/i,
       use: [
         // https://webpack.js.org/plugins/mini-css-extract-plugin/
         MiniCssExtractPlugin.loader,
 
         // https://webpack.js.org/loaders/css-loader/
         'css-loader',
+
+        // https://webpack.js.org/loaders/less-loader/
+        {
+          loader: "less-loader",
+          options: {
+            lessOptions: {
+              modifyVars: {
+                //'primary-color': '#1DA57A',
+              },
+              javascriptEnabled: true,
+            }
+          },
+        },
       ],
     }, {
       test: /\.(j|t)s$/,
