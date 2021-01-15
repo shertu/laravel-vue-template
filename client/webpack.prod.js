@@ -33,6 +33,9 @@ module.exports = merge(common, {
     },
 
     plugins: [
+        // https://github.com/johnagan/clean-webpack-plugin
+        new CleanWebpackPlugin(),
+
         // https://github.com/webpack-contrib/stylelint-webpack-plugin
         new StylelintPlugin({
             files: 'src/**/*.(css|less|vue)',

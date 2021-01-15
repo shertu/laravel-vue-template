@@ -15,7 +15,7 @@ newstart:
 openapi:
 	cd laravel && php artisan openapi:generate > openapi.json
 	mv laravel/openapi.json client
-	rm -r client/src/openapi-generator
+	rm -r client/src/openapi-generator && mkdir client/src/openapi-generator
 	cd client && npm run openapi
 	rm client/openapi.json
 

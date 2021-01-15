@@ -9,8 +9,8 @@ module.exports = {
   entry: path.resolve(__dirname, 'src/webpack-entry.ts'),
 
   plugins: [
-    // https://github.com/johnagan/clean-webpack-plugin
-    new CleanWebpackPlugin(),
+    // https://vue-loader.vuejs.org/
+    new VueLoaderPlugin(),
 
     // https://webpack.js.org/plugins/html-webpack-plugin/
     new HtmlWebpackPlugin({
@@ -21,9 +21,6 @@ module.exports = {
 
     // https://webpack.js.org/plugins/mini-css-extract-plugin/
     new MiniCssExtractPlugin(),
-
-    // https://vue-loader.vuejs.org/
-    new VueLoaderPlugin(),
   ],
 
   module: {
