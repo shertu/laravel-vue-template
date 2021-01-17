@@ -5,18 +5,23 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import { ApplicationUser, ApplicationUserApi } from "../../openapi-generator";
+import Vue from 'vue';
+import {ApplicationUser, ApplicationUserApi} from '../../openapi-generator';
 
 const APPLICATION_USER_API = new ApplicationUserApi();
 
-export default class ApplicationUserList extends Vue {
-  items: ApplicationUser[] = [];
+export default Vue.extend({
+  data() {
+    return {
+      items: [] as ApplicationUser[],
+    };
+  },
 
-  mounted() {
+  mounted(): void {
+    // The mounted hook returns nothing
     APPLICATION_USER_API.apiApplicationUsersGet().then(
-      (response: ApplicationUser[]) => (this.items = response)
+        (response: ApplicationUser[]) => (this.items = response),
     );
-  }
-}
+  },
+});
 </script>
