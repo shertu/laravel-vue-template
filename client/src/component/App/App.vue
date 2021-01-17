@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts">
-import ApplicationUserList from "../ApplicationUserList/ApplicationUserList.vue";
+import ApplicationUserList from '../ApplicationUserList/ApplicationUserList.vue';
 
 export default {
   components: {

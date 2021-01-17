@@ -8,7 +8,7 @@
 export default {
   data() {
     return {
-      message: "Hello World",
+      message: 'Hello World',
     };
   },
 };
@@ -28,7 +28,3 @@ export default {
 //   }
 // }
 </script>
-
-<style>
-
-</style>

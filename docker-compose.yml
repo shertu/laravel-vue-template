@@ -21,7 +21,7 @@ services:
       MYSQL_ROOT_PASSWORD: example
       MYSQL_DATABASE: laravel
     ports:
-      - '3306:3306/tcp'
+      - "3306:3306/tcp"
   # dns:
   #   image: coredns/coredns
   #   ports:
@@ -29,4 +29,3 @@ services:
   #   volumes:
   #     - ./coredns:/root/:ro # the root cannot be used as a volume
   #   command: -conf /root/Corefile # so we need to specify the path to a Corefile
-

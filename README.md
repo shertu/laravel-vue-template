@@ -1,6 +1,7 @@
 # php-app
 
 ## prerequisite collection
+
 You will need to download [composer](https://getcomposer.org/) and configure your system `PATH` and `composer.phar` file so that you can call `composer` from any directory in your terminal or shell.
 
 You will need to download and install the Node Package Manager which comes bundled with [Node.](https://nodejs.org/en/download/)

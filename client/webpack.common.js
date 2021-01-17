@@ -27,7 +27,7 @@ module.exports = {
 
   // https://webpack.js.org/configuration/resolve/
   resolve: {
-    extensions: [ '.tsx', '.ts', '.js' ],
+    extensions: ['.tsx', '.ts', '.js'],
   },
 
   module: {
