@@ -23,7 +23,7 @@ You will need to download and install a Java Virtual Machine for [`openapi-gener
 brew install --cask adoptopenjdk
 ```
 
-You Will need to download and install the [PHP coding standards fixer,](https://cs.symfony.com/) e.g.
+You will need to download and install the [PHP coding standards fixer,](https://cs.symfony.com/) e.g.
 
 ```
 brew install php-cs-fixer
