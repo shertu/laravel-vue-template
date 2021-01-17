@@ -1,14 +1,14 @@
 {
-    "ignores": [
-        "@types/jest",
-        "babel-loader",
-        "clean-webpack-plugin",
-        "html-loader",
-        "less",
-        "less-loader",
-        "stylelint-config-standard",
-        "typescript",
-        "webpack-cli",
-        "webpack-dev-server"
-    ]
+  "ignores": [
+    "@types/jest",
+    "babel-loader",
+    "clean-webpack-plugin",
+    "html-loader",
+    "less",
+    "less-loader",
+    "stylelint-config-standard",
+    "typescript",
+    "webpack-cli",
+    "webpack-dev-server"
+  ]
 }

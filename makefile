@@ -9,6 +9,7 @@ newstart:
 	cd client && npm install
 	cd laravel && composer install
 	cd laravel && php artisan migrate:fresh --seed
+	make openapi
 	make start
 
 # Generate API client library
