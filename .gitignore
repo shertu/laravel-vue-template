@@ -42,3 +42,6 @@ Temporary Items
 
 # vetur
 /vetur.config.js
+
+# npm
+/package-lock.json

@@ -1,12 +1,14 @@
 const path = require('path');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
   // https://webpack.js.org/concepts/entry-points/
-  entry: path.resolve(__dirname, 'src/webpack-entry.ts'),
+  entry: [
+    require('regenerator-runtime/path').path,
+    path.resolve(__dirname, 'src/webpack-entry.ts'),
+  ],
 
   plugins: [
     // https://vue-loader.vuejs.org/
@@ -22,6 +24,11 @@ module.exports = {
     // https://webpack.js.org/plugins/mini-css-extract-plugin/
     new MiniCssExtractPlugin(),
   ],
+
+  // https://webpack.js.org/configuration/resolve/
+  resolve: {
+    extensions: [ '.tsx', '.ts', '.js' ],
+  },
 
   module: {
     rules: [{
