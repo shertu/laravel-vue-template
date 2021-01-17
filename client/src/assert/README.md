@@ -2,15 +2,15 @@
 
 The following is a guide to classification of tests for client developers:
 
-| classification | purpose                                |     |     |     |
-| -------------- | -------------------------------------- | --- | --- | --- |
-| component      | custom made components                 |     |     |     |
-| integration    | APIs between the client and other apps |     |     |     |
-| unit           | individual methods and functions       |     |     |     |
+| classification | purpose                          |     |     |     |
+| -------------- | -------------------------------- | --- | --- | --- |
+| component      | custom made components           |     |     |     |
+| unit           | individual methods and functions |     |     |     |
 
 Please note that:
 
--   components which are specific in scope do **not** need to be tested.
+-   The one API which the client intergrates with is the web server via openapi-generator.
+-   Component tests are used to check for client side validation of state and props, e.g. certain fields on a form are required.
 
 // https://vuejs.org/v2/cookbook/unit-testing-vue-components.html
 // https://vue-test-utils.vuejs.org/guides/
