@@ -1,5 +1,14 @@
 # php-app
 
+This is a Laravel and Vue web application template which includes:
+
+- Docker,
+- TypeScript,
+- ESLint, Stylelint, PHP coding standards fixer,
+- Jest, PHPUnit,
+- Apache,
+- OpenAPI, OpenAPI Generator, etc.
+
 ## prerequisite collection
 
 You will need to download [composer](https://getcomposer.org/) and configure your system `PATH` and `composer.phar` file so that you can call `composer` from any directory in your terminal or shell.
@@ -18,6 +27,20 @@ You Will need to download and install the [PHP coding standards fixer,](https://
 
 ```
 brew install php-cs-fixer
+```
+
+# how to start development
+
+To start using this template, clone this repository and, from the repository's root directory, execute:
+
+```
+make newstart
+```
+
+Afterwards, for any future starts, you can execute this command for a more efficient start:
+
+```
+make start
 ```
 
 ## Vue
