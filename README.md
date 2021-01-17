@@ -29,7 +29,7 @@ You Will need to download and install the [PHP coding standards fixer,](https://
 brew install php-cs-fixer
 ```
 
-# how to start development
+## how to start development
 
 To start using this template, clone this repository and, from the repository's root directory, execute:
 
@@ -57,6 +57,6 @@ Laravel has the most extensive and thorough [documentation](https://laravel.com/
 
 If you don't feel like reading, [Laracasts](https://laracasts.com) can help.
 
-# Laravel OpenAPI
+## Laravel OpenAPI
 
 To connect the Vue front-end framework to the Laravel back-end framework use [Laravel OpenAPI](https://vyuldashev.github.io/laravel-openapi/) and the `make openapi` command.
