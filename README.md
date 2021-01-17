@@ -1,4 +1,4 @@
-# php-app
+# laravel-vue-template
 
 This is a Laravel and Vue web application template which includes:
 
@@ -7,7 +7,7 @@ This is a Laravel and Vue web application template which includes:
 - ESLint, Stylelint, PHP coding standards fixer,
 - Jest, PHPUnit,
 - Apache,
-- OpenAPI, OpenAPI Generator, etc.
+- OpenAPI, OpenAPI Generator,
 
 ## prerequisite collection
 
