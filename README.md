@@ -15,9 +15,9 @@ This is a Laravel and Vue web application template which includes:
 You will need to download and install the following software such that you can call them from any directory in your terminal or shell:
 
 - [Composer](https://getcomposer.org/)
-- [Node](https://nodejs.org/en/download/)
+- [Node Package Manager](https://nodejs.org/en/download/)
 - [Docker Desktop](https://www.docker.com/products/docker-desktop)
-- A [Java Virtual Machine](https://www.java.com/en/download/)
+- [Java Virtual Machine](https://www.java.com/en/download/)
 - [PHP coding standards fixer](https://cs.symfony.com/)
 
 ## how to start development

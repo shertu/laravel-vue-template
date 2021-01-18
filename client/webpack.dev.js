@@ -10,7 +10,7 @@ module.exports = merge(common, {
 
   // https://webpack.js.org/configuration/dev-server/
   devServer: {
+    hot: true,
     open: true,
-    hot: true
   }
 });
