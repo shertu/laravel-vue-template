@@ -10,9 +10,7 @@
     />
     <a-list item-layout="horizontal" :data-source="items">
       <a-list-item slot="renderItem" slot-scope="item">
-        <a-list-item-meta
-          description="Ant Design, a design language for background applications, is refined by Ant UED Team"
-        >
+        <a-list-item-meta v-bind:description="item.id">
           <div slot="title">{{ item.name }}</div>
           <a-avatar slot="avatar" v-bind:src="item.avatarUrl" />
         </a-list-item-meta>
@@ -22,8 +20,8 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import { ApplicationUser, ApplicationUserApi } from "../../openapi-generator";
+import Vue from 'vue';
+import {ApplicationUser, ApplicationUserApi} from '../../openapi-generator';
 
 const APPLICATION_USER_API = new ApplicationUserApi();
 
@@ -31,15 +29,15 @@ export default Vue.extend({
   data() {
     return {
       items: [] as ApplicationUser[],
-      err: false as boolean
+      err: false as boolean,
     };
   },
 
   mounted(): void {
     // The mounted hook returns nothing
     APPLICATION_USER_API.apiApplicationUsersGet()
-      .then((response: ApplicationUser[]) => (this.items = response))
-      .catch((err: Response) => (this.err = true));
-  }
+        .then((response: ApplicationUser[]) => (this.items = response))
+        .catch((err: Response) => (this.err = true));
+  },
 });
 </script>

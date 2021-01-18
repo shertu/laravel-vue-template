@@ -16,9 +16,9 @@ module.exports = {
     "max-len": [
       "error",
       {
-        // code: 80,
-        // tabWidth: 2,
-        // ignoreUrls: true,
+        code: 80,
+        tabWidth: 2,
+        ignoreUrls: true,
         ignorePattern: "import .*"
       }
     ]

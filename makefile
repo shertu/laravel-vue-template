@@ -25,6 +25,10 @@ start:
 	docker-compose up -d
 	cd client && npm run start
 
+# Build the client for production
+build:
+	cd client && npm run build
+
 # Execute code linters to fix code style
 lint_server:
 	cd laravel && php-cs-fixer fix . --rules=@Symfony

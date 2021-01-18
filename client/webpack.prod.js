@@ -6,6 +6,9 @@ const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const StylelintPlugin = require("stylelint-webpack-plugin");
 const ESLintPlugin = require("eslint-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
+  .BundleAnalyzerPlugin;
+const webpack = require("webpack");
 
 module.exports = merge(common, {
   // https://webpack.js.org/configuration/mode/
@@ -18,6 +21,7 @@ module.exports = merge(common, {
   output: {
     path: path.resolve(__dirname, "../laravel/public/wwwroot"),
     publicPath: "/wwwroot/"
+    //filename: '[name].bundle.js',
   },
 
   optimization: {
@@ -30,6 +34,11 @@ module.exports = merge(common, {
         cssProcessor: require("cssnano")
       })
     ]
+
+    // https://webpack.js.org/guides/code-splitting/
+    // splitChunks: {
+    //   chunks: "all"
+    // }
   },
 
   plugins: [
@@ -46,6 +55,14 @@ module.exports = merge(common, {
     new ESLintPlugin({
       files: "src/**/*.(js|ts|vue)",
       fix: true
-    })
+    }),
+
+    // https://github.com/webpack-contrib/webpack-bundle-analyzer
+    new BundleAnalyzerPlugin(),
+
+    // ignore moment.js
+    new webpack.IgnorePlugin({
+      resourceRegExp: /moment$/
+    }),
   ]
 });
